@@ -38,5 +38,12 @@ testLines <- function(testFolder) {
   
     testfiles <- list.files(testFolder, full.names = TRUE)
     lineas <- vapply(testfiles, function(x) length(readLines(x)), numeric(1L))
+## browser()
     sum(lineas)
 }
+
+## para entrar a modo debug
+##
+## debugonce(testLines)
+## debug(testLines)
+## undebug(testLines)
